@@ -237,7 +237,7 @@ export default class MediaPlayerObject {
   }
 
   async fetchArtwork(): Promise<string | false> {
-    const url = this._attr.entity_picture_local ? this.hass.hassUrl(this.picture) : this.picture;
+    const url = this._attr.entity_picture ? this.hass.hassUrl(this.picture) : this.picture;
 
     try {
       const res = await fetch(new Request(url));
